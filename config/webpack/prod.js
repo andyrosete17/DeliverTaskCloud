@@ -9,20 +9,6 @@ module.exports = merge(base, {
   output: {
     path: helpers.resolveFromRootPath('dist'),
     filename: './js/[name].[chunkhash].js',
-    assetModuleFilename: './images/[hash][ext][query]',
-  },
-  optimization: {
-    runtimeChunk: 'single',
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          chunks: 'all',
-          name: 'vendor',
-          test: /[\\/]node_modules[\\/]/,
-          enforce: true,
-        },
-      },
-    },
   },
   module: {
     rules: [

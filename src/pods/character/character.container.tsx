@@ -9,7 +9,7 @@ export const CharacterContainer: React.FunctionComponent = (props) => {
   const [character, setCharacter] = React.useState<Character>(
     createEmptyCharacter()
   );
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
 
   const handleLoadCharacter = async () => {
     const apiCharacter = await api.getCharacter(id);
