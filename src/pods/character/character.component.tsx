@@ -1,15 +1,14 @@
-import React from 'react';
-
 import {
   Avatar,
-  Button,
   Card,
   CardActionArea,
   CardContent,
   CardHeader,
   CardMedia,
   Typography,
-} from '@material-ui/core';
+} from '@mui/material';
+import React from 'react';
+
 import { Character } from './character.vm';
 
 interface Props {

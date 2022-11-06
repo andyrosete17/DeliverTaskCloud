@@ -1,18 +1,16 @@
 import * as React from 'react';
-import StylesProvider from '@material-ui/styles/StylesProvider';
-import ThemeProvider from '@material-ui/styles/ThemeProvider';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import { theme } from './theme';
+import { CssBaseline, StyledEngineProvider, ThemeProvider } from '@mui/material';
 
 export const ThemeProviderComponent = (props) => {
   const { children } = props;
 
   return (
-    <StylesProvider injectFirst>
+    <StyledEngineProvider  injectFirst>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {children}
       </ThemeProvider>
-    </StylesProvider>
+    </StyledEngineProvider>
   );
 };

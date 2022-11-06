@@ -1,8 +1,8 @@
 import React from 'react';
 import { cx } from 'emotion';
 import { useField } from 'formik';
-import MuiTextField, { TextFieldProps } from '@material-ui/core/TextField';
 import * as classes from './text-field.styles';
+import { TextFieldProps, TextField  } from '@mui/material';
 
 export const TextFieldComponent: React.FunctionComponent<TextFieldProps> = (
   props
@@ -14,7 +14,7 @@ export const TextFieldComponent: React.FunctionComponent<TextFieldProps> = (
   const helperText = Boolean(field) ? meta?.error : props.helperText;
 
   return (
-    <MuiTextField
+    <TextField
       {...props}
       name={name}
       id={name}
